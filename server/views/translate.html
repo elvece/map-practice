@@ -1,0 +1,186 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+  <div class="container-fluid">
+
+    <div class="row">
+
+      <h3>{{ title }}</h3><br>
+
+      <!-- Translate form with dropdowns -->
+      <div class="row">
+
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="translate-from-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Translate From
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="translate-from-dropdown">
+            <li id="ar"><a href="#">Arabic</a></li>
+            <li id="bs-Latn"><a href="#">Bosnian (Latin)</a></li>
+            <li id="bg"><a href="#">Bulgarian</a></li>
+            <li id="ca"><a href="#">Catalan</a></li>
+            <li id="zh-CHS"><a href="#">Chinese (Simplified)</a></li>
+            <li id="zh-CHT"><a href="#">Chinese (Traditional)</a></li>
+            <li id="hr"><a href="#">Croatian</a></li>
+            <li id="cs"><a href="#">Czech</a></li>
+            <li id="da"><a href="#">Danish</a></li>
+            <li id="nl"><a href="#">Dutch</a></li>
+            <li id="en"><a href="#">English</a></li>
+            <li id="et"><a href="#">Estonian</a></li>
+            <li id="fi"><a href="#">Finnish</a></li>
+            <li id="fr"><a href="#">French</a></li>
+            <li id="de"><a href="#">German</a></li>
+            <li id="el"><a href="#">Greek</a></li>
+            <li id="ht"><a href="#">Hatian Creole</a></li>
+            <li id="he"><a href="#">Hebrew</a></li>
+            <li id="hi"><a href="#">Hindi</a></li>
+            <li id="mww"><a href="#">Hmong Daw</a></li>
+            <li id="hu"><a href="#">Hungarian</a></li>
+            <li id="id"><a href="#">Indonesian</a></li>
+            <li id="it"><a href="#">Italian</a></li>
+            <li id="ja"><a href="#">Japanese</a></li>
+            <li id="tlh"><a href="#">Klingon</a></li>
+            <li id="ko"><a href="#">Korean</a></li>
+            <li id="lv"><a href="#">Latvian</a></li>
+            <li id="lt"><a href="#">Lithuanian</a></li>
+            <li id="ms"><a href="#">Malay</a></li>
+            <li id="mt"><a href="#">Maltese</a></li>
+            <li id="no"><a href="#">Norwegian</a></li>
+            <li id="fa"><a href="#">Persian</a></li>
+            <li id="pl"><a href="#">Polish</a></li>
+            <li id="pt"><a href="#">Portuguese</a></li>
+            <li id="otq"><a href="#">Querétaro Otomi</a></li>
+            <li id="ro"><a href="#">Romanian</a></li>
+            <li id="ru"><a href="#">Russian</a></li>
+            <li id="sr-Cyrl"><a href="#">Serbian (Cyrillic)</a></li>
+            <li id="sr-Latn"><a href="#">Serbain (Latin)</a></li>
+            <li id="sk"><a href="#">Slovak</a></li>
+            <li id="sl"><a href="#">Slovenian</a></li>
+            <li id="es"><a href="#">Spanish</a></li>
+            <li id="sv"><a href="#">Swedish</a></li>
+            <li id="th"><a href="#">Thai</a></li>
+            <li id="tr"><a href="#">Turkish</a></li>
+            <li id="uk"><a href="#">Ukrainian</a></li>
+            <li id="ur"><a href="#">Urdu</a></li>
+            <li id="vi"><a href="#">Vietnamese</a></li>
+            <li id="cy"><a href="#">Welsh</a></li>
+            <li id="yua"><a href="#">Yucatec Maya</a></li>
+          </ul>
+
+          <button class="btn btn-default dropdown-toggle" type="button" id="translate-to-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            Translate To
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="translate-to-dropdown">
+            <li id="ar"><a href="#">Arabic</a></li>
+            <li id="bs-Latn"><a href="#">Bosnian (Latin)</a></li>
+            <li id="bg"><a href="#">Bulgarian</a></li>
+            <li id="ca"><a href="#">Catalan</a></li>
+            <li id="zh-CHS"><a href="#">Chinese (Simplified)</a></li>
+            <li id="zh-CHT"><a href="#">Chinese (Traditional)</a></li>
+            <li id="hr"><a href="#">Croatian</a></li>
+            <li id="cs"><a href="#">Czech</a></li>
+            <li id="da"><a href="#">Danish</a></li>
+            <li id="nl"><a href="#">Dutch</a></li>
+            <li id="en"><a href="#">English</a></li>
+            <li id="et"><a href="#">Estonian</a></li>
+            <li id="fi"><a href="#">Finnish</a></li>
+            <li id="fr"><a href="#">French</a></li>
+            <li id="de"><a href="#">German</a></li>
+            <li id="el"><a href="#">Greek</a></li>
+            <li id="ht"><a href="#">Hatian Creole</a></li>
+            <li id="he"><a href="#">Hebrew</a></li>
+            <li id="hi"><a href="#">Hindi</a></li>
+            <li id="mww"><a href="#">Hmong Daw</a></li>
+            <li id="hu"><a href="#">Hungarian</a></li>
+            <li id="id"><a href="#">Indonesian</a></li>
+            <li id="it"><a href="#">Italian</a></li>
+            <li id="ja"><a href="#">Japanese</a></li>
+            <li id="tlh"><a href="#">Klingon</a></li>
+            <li id="ko"><a href="#">Korean</a></li>
+            <li id="lv"><a href="#">Latvian</a></li>
+            <li id="lt"><a href="#">Lithuanian</a></li>
+            <li id="ms"><a href="#">Malay</a></li>
+            <li id="mt"><a href="#">Maltese</a></li>
+            <li id="no"><a href="#">Norwegian</a></li>
+            <li id="fa"><a href="#">Persian</a></li>
+            <li id="pl"><a href="#">Polish</a></li>
+            <li id="pt"><a href="#">Portuguese</a></li>
+            <li id="otq"><a href="#">Querétaro Otomi</a></li>
+            <li id="ro"><a href="#">Romanian</a></li>
+            <li id="ru"><a href="#">Russian</a></li>
+            <li id="sr-Cyrl"><a href="#">Serbian (Cyrillic)</a></li>
+            <li id="sr-Latn"><a href="#">Serbain (Latin)</a></li>
+            <li id="sk"><a href="#">Slovak</a></li>
+            <li id="sl"><a href="#">Slovenian</a></li>
+            <li id="es"><a href="#">Spanish</a></li>
+            <li id="sv"><a href="#">Swedish</a></li>
+            <li id="th"><a href="#">Thai</a></li>
+            <li id="tr"><a href="#">Turkish</a></li>
+            <li id="uk"><a href="#">Ukrainian</a></li>
+            <li id="ur"><a href="#">Urdu</a></li>
+            <li id="vi"><a href="#">Vietnamese</a></li>
+            <li id="cy"><a href="#">Welsh</a></li>
+            <li id="yua"><a href="#">Yucatec Maya</a></li>
+          </ul>
+        </div>
+
+     <!-- end dropdown row div  -->
+      </div><br>
+
+      <!-- Translate Form -->
+      <div class="row">
+        <form class="form-inline" id="translate-form">
+          <div class="form-group">
+            <label>Text to translate</label>
+            <input type="text" id="text-to-translate" name="text-to-translate" class="form-control" required>
+          </div>
+          <button type="submit" class="btn btn-default">Translate</button>
+        </form>
+      <!-- end translate form row -->
+      </div>
+
+      <!-- spacing and line -->
+      <br><hr><br>
+
+      <!-- Translate Form -->
+      <div class="row">
+        <form class="form-inline" id="translate-form">
+          <div class="form-group">
+            <!-- Start Lang-->
+            <label>Start Lang </label>
+            <input type="text" id="start-lang" name="start-lang" class="form-control" required>
+
+            <!-- End Lang-->
+            <label>End Lang </label>
+            <input type="text" id="end-lang" name="end-lang" class="form-control" required>
+
+            <!-- Form for text to be translated-->
+            <label>Text to translate</label>
+            <input type="text" id="to-translate" name="to-translate" class="form-control" required>
+
+          </div>
+          <button type="submit" class="btn btn-default">Translate</button>
+        </form>
+      <!-- end translate form div -->
+      </div>
+    <!-- end translate form row -->
+    </div>
+
+    <!-- spacing and line -->
+     <br><hr><br>
+
+    <!-- translation result -->
+    <h2>Translation</h2>
+    <div id="result">
+    </div>
+
+  <!-- end container div -->
+  </div>
+
+{% endblock %}
